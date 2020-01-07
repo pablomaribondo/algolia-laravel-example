@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('product', ['as'=>'product.index','uses'=>'ProductController@index']);
+Route::post('product-add', ['as'=>'product.add','uses'=>'ProductController@create']);
